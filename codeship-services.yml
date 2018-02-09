@@ -2,7 +2,9 @@ projectConfig:
   build:
     image: organisation_name/project_name
     dockerfile: Dockerfile.build
-    cached: true
+
+  cached: true
+
   depends_on:
     - redis
     - postgres
