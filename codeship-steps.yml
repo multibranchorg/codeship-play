@@ -12,7 +12,7 @@
   - service: maven
     name: unit tests
     command: mvn test -Punit -B
-  - service: maven
+  - service: integration
     name: integration tests
     command: mvn test -Pintegration -B
 
@@ -20,5 +20,6 @@
   name: deploy
   steps: 
   - service: maven
+    name: deploy command here
     command: ls -lah target/
 
