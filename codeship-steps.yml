@@ -16,5 +16,5 @@
   name: deploy
   steps: 
   - service: maven
-    command: ls -lah && echo 'publish here' 
+    command: ls -lah 
 
