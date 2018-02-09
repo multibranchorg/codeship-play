@@ -4,7 +4,7 @@
   - service: maven
     command: mvn package -B
   - service: maven
-    command: touch ./target/persists
+    command: touch target/persists
 
 - type: parallel
   name: tests
