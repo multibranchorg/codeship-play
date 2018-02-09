@@ -2,8 +2,9 @@ maven:
   build:
     image: organisation_name/project_name
     dockerfile: Dockerfile.build
-
   cached: true
+  volumes:
+  - ./tmp:/target
 
   depends_on:
     - redis
