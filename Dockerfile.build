@@ -4,7 +4,7 @@ FROM maven:3
 
 # INSTALL any further tools you need here so they are cached in the docker build
 
-WORKDIR /app
+# WORKDIR /app
 
 # Copy the pom.xml into the image to install all dependencies
 COPY pom.xml ./
