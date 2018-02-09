@@ -8,8 +8,10 @@
   name: tests
   steps: 
   - service: maven
+    name: unit tests
     command: mvn test -Punit -B
   - service: maven
+    name: integration tests
     command: mvn test -Pintegration -B
 
 - type: serial
