@@ -1,4 +1,4 @@
-projectConfig:
+maven:
   build:
     image: organisation_name/project_name
     dockerfile: Dockerfile.build

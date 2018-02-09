@@ -1,3 +1,20 @@
-- name: ci
-  service: projectConfig
-  command: mvn test -B
+- type: serial
+  name: build
+  steps:
+  - service: maven
+    command: mvn package -B
+
+- type: parallel
+  name: tests
+  steps: 
+  - service: maven
+    command: mvn test -Punit -B
+  - service: maven
+    command: mvn test -Pintegration -B
+
+- type: serial
+  name: deploy
+  steps: 
+  - service: maven
+    command: echo 'publish here' 
+
