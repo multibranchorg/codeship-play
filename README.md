@@ -11,9 +11,13 @@ Features:
 * Simple mvn build using the Dockerfile.build to describe the environment
 * Postgres, redis services are available for future integration testing
 * shows how to do JVM stuff with codeship pro, services steps and more. See Dockerfile.build, codeship-steps.yml and codeship-services.yml
-* Fork and reuse
+* Runs unit and integration tests in parallel
+* Placeholder for deployment stage
+* Integration tests have additional services available
+* Uses caching for fast builds
+* Dockerfile.build used to specifify build requirements (could do similar for integration)
+* Fork and reuse and adapt to your needs. 
 
 
 See: https://documentation.codeship.com/pro/languages-frameworks/java/
 
-TODO: parallel testing with volume sharing
