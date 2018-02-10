@@ -2,16 +2,5 @@ projectConfig:
   build:
     image: organisation_name/project_name
     dockerfile: Dockerfile.build
-
   cached: true
 
-  depends_on:
-    - redis
-    - postgres
-  environment:
-    - DATABASE_URL=postgres://postgres@postgres/YOUR_DATABASE_NAME
-    - REDIS_URL=redis://redis
-redis:
-  image: healthcheck/redis:alpine
-postgres:
-  image: healthcheck/postgres:alpine
