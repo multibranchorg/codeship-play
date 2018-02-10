@@ -4,6 +4,7 @@ FROM maven:3
 
 # INSTALL any further tools you need here so they are cached in the docker build
 
+# If I set a workdir, need to adjust the volume in codeship-services.yml to be /app/target
 # WORKDIR /app
 
 # Copy the pom.xml into the image to install all dependencies
