@@ -21,3 +21,5 @@ Features:
 
 See: https://documentation.codeship.com/pro/languages-frameworks/java/
 
+See also: https://github.com/multibranchorg/codeship-play/blob/simplest for a simpler version of all this. 
+
