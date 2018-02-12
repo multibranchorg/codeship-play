@@ -1,6 +1,4 @@
-#
-# Jenkinsfile approximating the codeship-services/steps.yml files. 
-#
+// Jenkinsfile approximating the codeship-services/steps.yml files. 
 
 pipeline {
   agent none
