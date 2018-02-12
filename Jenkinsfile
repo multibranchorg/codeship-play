@@ -1,4 +1,4 @@
-#sample mapping to the codeship on this branch
+// sample mapping to the codeship on this branch
 
 pipeline {
   agent {
