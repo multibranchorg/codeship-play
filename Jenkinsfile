@@ -8,7 +8,9 @@ pipeline {
   } 
   stages {
     stage('build') {
-      sh 'mvn test -B'
+      steps {        
+        sh 'mvn test -B'
+      }
     }
   }
   
