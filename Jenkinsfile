@@ -13,7 +13,7 @@ pipeline {
            checkout scm
            sh 'mvn package -DskipTests -B'
            sh 'touch target/persists'
-           stash includes: '/target', name: 'target'          
+           stash includes: './target', name: 'binaries'          
          }
     }
     
@@ -22,11 +22,11 @@ pipeline {
         stage('unit tests') {
           agent {
             dockerfile {            
-              filename 'Dockfile.build'           
+              filename 'Dockerfile.build'           
             }
           }
           steps {
-            unstash 'target'
+            unstash 'binaries'
             sh 'mvn test -Punit -B'
           }
         }
@@ -37,7 +37,7 @@ pipeline {
             }
           }
           steps {
-            unstash 'target'
+            unstash 'binaries'
             sh 'echo integration tests'
           }
         }      
@@ -52,7 +52,7 @@ pipeline {
       }
       
       steps {
-        unstash 'target'
+        unstash 'binaries'
         sh 'ls -lah target/'
         
       }
