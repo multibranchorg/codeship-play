@@ -32,7 +32,9 @@ pipeline {
         stage('integration tests') {
           agent {
             docker {
-              image 'busybox'
+              //this in reality would need to rollup redis, postgres, into a composite image with all services
+              //currently pipeline has no declarative way to assemble services the way compose/codeship does 
+              image 'busybox' 
             }
           }
           steps {
