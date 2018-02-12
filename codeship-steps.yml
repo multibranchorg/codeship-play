@@ -2,7 +2,7 @@
   name: build
   steps:
   - service: maven
-    command: mvn package -B
+    command: mvn package -DskipTests -B
   - service: maven
     command: touch target/persists
 
