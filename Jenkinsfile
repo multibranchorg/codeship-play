@@ -12,7 +12,7 @@ pipeline {
          steps {
            sh 'mvn package -DskipTests -B'
            sh 'touch target/persists'
-           stash includes: './target', name: 'target'          
+           stash includes: 'target/*', name: 'binaries'          
          }
     }
     
@@ -21,22 +21,24 @@ pipeline {
         stage('unit tests') {
           agent {
             dockerfile {            
-              filename 'Dockfile.build'           
+              filename 'Dockerfile.build'           
             }
           }
           steps {
-            unstash 'target'
+            unstash 'binaries'
             sh 'mvn test -Punit -B'
           }
         }
         stage('integration tests') {
           agent {
             docker {
-              image 'busybox'
+              //this in reality would need to rollup redis, postgres, into a composite image with all services
+              //currently pipeline has no declarative way to assemble services the way compose/codeship does 
+              image 'busybox' 
             }
           }
           steps {
-            unstash 'target'
+            unstash 'binaries'
             sh 'echo integration tests'
           }
         }      
@@ -46,12 +48,12 @@ pipeline {
     stage('deploy') {
       agent {
         dockerfile  {
-          filename: 'Dockerfile.build'
+          filename 'Dockerfile.build'
         }       
       }
       
       steps {
-        unstash 'target'
+        unstash 'binaries'
         sh 'ls -lah target/'
         
       }
