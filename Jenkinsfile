@@ -10,10 +10,9 @@ pipeline {
            }
          }
          steps {
-           checkout scm
            sh 'mvn package -DskipTests -B'
            sh 'touch target/persists'
-           stash includes: './target', name: 'binaries'          
+           stash includes: 'target/*', name: 'binaries'          
          }
     }
     
