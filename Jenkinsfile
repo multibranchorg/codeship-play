@@ -38,6 +38,7 @@ pipeline {
             }
           }
           steps {
+            unstash 'target'
             sh 'echo integration tests'
           }
         }      
