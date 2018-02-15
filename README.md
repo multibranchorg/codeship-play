@@ -1,4 +1,4 @@
-# CodeShip Pro and Spring Boot starter
+# CodeShip Pro and Spring Boot starter with Jenkinsfile
 
 <img src='https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/spring-boot/spring-boot.png'/>
 
@@ -17,6 +17,7 @@ Features:
 * Uses caching for fast builds
 * Dockerfile.build used to specifify build requirements (could do similar for integration)
 * Fork and reuse and adapt to your needs. 
+* Jenkinsfile shows a somewhat idiomatic equivalent of the codeship pipeline that works in Jenkins with docker pipeline installed. 
 
 
 See: https://documentation.codeship.com/pro/languages-frameworks/java/
