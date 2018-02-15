@@ -1,8 +1,11 @@
 # CodeShip Pro and Spring Boot starter with Jenkinsfile
 
-<img src='https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/spring-boot/spring-boot.png'/>
+[ ![Codeship Status for multibranchorg/codeship-play](https://app.codeship.com/projects/33b34200-ef63-0135-d1ff-66408b09b4d7/status?branch=master)](https://app.codeship.com/projects/271119)
 
 <img src='https://www.cloudbees.com/sites/default/files/codeship-by-cloudbees.png'>
+
+<img src='https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/spring-boot/spring-boot.png'/>
+
 
 This app was made via start.spring.io
 
