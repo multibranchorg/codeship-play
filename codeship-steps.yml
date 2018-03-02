@@ -5,6 +5,8 @@
     command: mvn package -DskipTests -B
   - service: maven
     command: touch target/persists
+  - service: maven
+    command: curl -sSL https://download.sourceclear.com/ci.sh | sh
 
 - type: parallel
   name: tests

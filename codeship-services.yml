@@ -3,6 +3,7 @@ maven:
     image: cloudbees/sample-project
     dockerfile: Dockerfile.build
   cached: true
+  encrypted_env_file: env.encrypted
   volumes:
   - ./tmp:/target
 
