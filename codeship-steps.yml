@@ -6,7 +6,7 @@
   - service: maven
     command: touch target/persists
   - service: maven
-    command: curl -sSL https://download.sourceclear.com/ci.sh | sh
+    command: ./source_clear.sh
 
 - type: parallel
   name: tests
