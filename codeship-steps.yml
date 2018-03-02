@@ -6,8 +6,8 @@
   - service: maven
     command: touch target/persists
   - service: maven
-    name: sourceclear
-    command: ./source_clear.sh
+    name: gitlinks
+    command: ./gitlinks.sh
 
 - type: parallel
   name: tests
