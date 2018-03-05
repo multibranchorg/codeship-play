@@ -9,7 +9,7 @@ maven:
 
 gitlinks: 
  image: debian
- volumes-fromt: 
+ volumes-from: 
   - maven
 
 integration:
