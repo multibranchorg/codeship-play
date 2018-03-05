@@ -5,7 +5,7 @@
     command: mvn package -DskipTests -B
   - service: maven
     command: touch target/persists
-  - service: maven
+  - service: gitlinks
     name: gitlinks
     command: ./gitlinks.sh
 
