@@ -1,0 +1,4 @@
+FROM debian:jessie
+
+# Copy the whole repository into the image
+COPY . ./

@@ -7,8 +7,10 @@ maven:
   volumes:
   - ./tmp:/target
 
-gitlinks: 
- image: debian
+gitlinks:
+ build: 
+  image: mic/gitlinks
+  dockerfile: Dockerfile.gitlinks
  volumes-from: 
   - maven
 
