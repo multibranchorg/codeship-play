@@ -8,7 +8,7 @@ maven:
   - ./tmp:/target
 
 gitlinks: 
- image: debian:jesse 
+ image: debian
  volumes-fromt: 
   - maven
 
