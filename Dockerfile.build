@@ -1,11 +1,12 @@
-# We're using the official Maven 3 image from the Docker Hub (https://hub.docker.com/_/maven/).
-# Take a look at the available versions so you can specify the Java version you want to use.
-FROM maven:3
+# You can make your own too
+FROM michaelneale/codeship-jenkinsfile
 
-# INSTALL any further tools you need here so they are cached in the docker build
 
-# If I set a workdir, need to adjust the volume in codeship-services.yml to be /app/target
-# WORKDIR /app
+# install maven
+RUN apt-get update
+RUN apt-get install -y maven
+
+WORKDIR workspace
 
 # Copy the pom.xml into the image to install all dependencies
 COPY pom.xml ./
@@ -15,5 +16,6 @@ COPY pom.xml ./
 # testing and make sure the command doesn't fail.
 RUN mvn install clean --fail-never -B -DfailIfNoTests=false
 
-# Copy the whole repository into the image
+
+# This gets the source in place for codeship to do its thing from codeship-steps.yml
 COPY . ./

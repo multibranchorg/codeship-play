@@ -1,25 +1,3 @@
-- type: serial
-  name: build
-  steps:
-  - service: maven
-    command: mvn package -DskipTests -B
-  - service: maven
-    command: touch target/persists
-
-- type: parallel
-  name: tests
-  steps: 
-  - service: maven
-    name: unit tests
-    command: mvn test -Punit -B
-  - service: integration
-    name: integration tests
-    command: echo 'integration tests'
-
-- type: serial
-  name: deploy
-  steps: 
-  - service: maven
-    name: deploy command here
-    command: ls -lah target/
-
+- name: Jenkinsfile
+  service: projectConfig
+  command: /app/bin/jenkinsfile-runner /app/jenkins /app/plugins /workspace
