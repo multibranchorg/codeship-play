@@ -1,3 +1,5 @@
+trying out source clear
+
 # CodeShip Pro and Spring Boot starter with Jenkinsfile
 
 [ ![Codeship Status for multibranchorg/codeship-play](https://app.codeship.com/projects/33b34200-ef63-0135-d1ff-66408b09b4d7/status?branch=master)](https://app.codeship.com/projects/271119)
